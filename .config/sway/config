@@ -94,6 +94,11 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+gaps outer 6
+gaps inner 12
+
+default_border pixel 1
+
 #
 # Status Bar:
 #

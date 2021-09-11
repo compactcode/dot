@@ -1,15 +1,16 @@
-export EDITOR=nvim
-export GPG_TTY=$(tty)
-
 # Emacs keybindings.
 bindkey -e
 
 # Plugin manager.
 source /usr/share/zinit/zinit.zsh
 
-zinit snippet PZTM::directory
 zinit snippet PZTM::completion
+zinit snippet PZTM::directory
 zinit snippet PZTM::history
+
+zinit snippet OMZP::gpg-agent
+
+export EDITOR=nvim
 
 alias g='git'
 alias ga='git add'
@@ -34,6 +35,7 @@ alias yc='yadm commit'
 alias yd='yadm diff'
 alias ys='yadm status'
 
-gpg-connect-agent updatestartuptty /bye >/dev/null
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 eval "$(starship init zsh)"

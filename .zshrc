@@ -1,6 +1,5 @@
-eval "$(starship init zsh)"
-
 export EDITOR=nvim
+export GPG_TTY=$(tty)
 
 alias g='git'
 alias ga='git add'
@@ -23,3 +22,7 @@ alias ya='yadm add'
 alias yc='yadm commit'
 alias yd='yadm diff'
 alias ys='yadm status'
+
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+eval "$(starship init zsh)"

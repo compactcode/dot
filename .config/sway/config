@@ -24,6 +24,7 @@ input "type:keyboard" {
 bindsym $mod+Return exec $term
 bindsym $mod+w exec firefox
 
+bindsym $mod+space exec bemenu-run -b
 bindsym $mod+Shift+q kill
 
 # Reload the configuration file

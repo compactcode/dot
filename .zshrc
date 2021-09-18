@@ -11,7 +11,9 @@ zinit snippet PZTM::history
 zinit snippet OMZP::gpg-agent
 
 export EDITOR=nvim
+export FZF_DEFAULT_OPTS="--reverse --height 40%"
 
+alias b='bat'
 alias g='git'
 alias ga='git add'
 alias gars='git add . && git reset --hard'
@@ -20,6 +22,7 @@ alias gca='git commit --amend'
 alias gco='git checkout'
 alias gcp='git cherry-pick'
 alias gd='git diff'
+alias gdc='git diff --cached'
 alias glg='git log --stat'
 alias glr='git pull --rebase'
 alias gp='git push'

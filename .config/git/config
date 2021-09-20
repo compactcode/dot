@@ -1,0 +1,7 @@
+[commit]
+	gpgSign = true
+
+[user]
+	email = "hi@shan.dog"
+	name = "Shanon McQuay"
+	signingKey = "BF2AD40D0652EF0B"

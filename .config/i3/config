@@ -74,6 +74,9 @@ bindsym Mod1+x split h
 
 # Applications.
 bindsym Mod1+Return exec --no-startup-id alacritty
+bindsym Mod1+b exec --no-startup-id firefox
+bindsym Mod1+Shift+r reload
+bindsym Mod1+space exec --no-startup-id rofi -show drun
 
 # Pin applications to a workspace.
 assign [class="^Slack$"] $chat

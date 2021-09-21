@@ -1,0 +1,8 @@
+configuration {
+    timeout {
+        delay: 0;
+        action: "kb-cancel";
+    }
+}
+
+@theme "Arc-Dark"

@@ -1,0 +1,115 @@
+# Defaults.
+font pango:monospace 8.000000
+floating_modifier Mod1
+hide_edge_borders none
+force_focus_wrapping no
+focus_follows_mouse yes
+focus_on_window_activation smart
+mouse_warping output
+workspace_layout default
+workspace_auto_back_and_forth no
+
+# Workspaces.
+set $web      "1:"
+set $code     "2:"
+set $code-alt "3:"
+set $files    "4:"
+set $chat     "5:"
+set $open     "6:"
+set $open-alt "7:"
+set $music    "8:"
+set $games    "9:"
+
+# Switch to workspace.
+bindsym Mod1+1 workspace $web
+bindsym Mod1+2 workspace $code
+bindsym Mod1+3 workspace $code-alt
+bindsym Mod1+4 workspace $files
+bindsym Mod1+5 workspace $chat
+bindsym Mod1+6 workspace $open
+bindsym Mod1+7 workspace $open-alt
+bindsym Mod1+8 workspace $music
+bindsym Mod1+9 workspace $games
+
+# Move applications to another workspace.
+bindsym Mod1+Shift+1 move container to workspace $web
+bindsym Mod1+Shift+2 move container to workspace $code
+bindsym Mod1+Shift+3 move container to workspace $code-alt
+bindsym Mod1+Shift+4 move container to workspace $files
+bindsym Mod1+Shift+5 move container to workspace $chat
+bindsym Mod1+Shift+6 move container to workspace $open
+bindsym Mod1+Shift+7 move container to workspace $open-alt
+bindsym Mod1+Shift+8 move container to workspace $music
+bindsym Mod1+Shift+9 move container to workspace $games
+
+# Resize current window.
+bindsym Mod1+Shift+Down resize grow height 2 px or 2 ppt
+bindsym Mod1+Shift+Left resize shrink width 2 px or 2 ppt
+bindsym Mod1+Shift+Right resize grow width 2 px or 2 ppt
+bindsym Mod1+Shift+Up resize shrink height 2 px or 2 ppt
+
+# Move current window within the current workspace.
+bindsym Mod1+Shift+h move left
+bindsym Mod1+Shift+j move down
+bindsym Mod1+Shift+k move up
+bindsym Mod1+Shift+l move right
+
+# Tab between the last two workspaces.
+bindsym Mod1+Tab workspace back_and_forth
+
+# Fullscreen current window.
+bindsym Mod1+f fullscreen toggle
+
+# Move focus between windows.
+bindsym Mod1+h focus left
+bindsym Mod1+j focus down
+bindsym Mod1+k focus up
+bindsym Mod1+l focus right
+
+# Toggle between stacking/tabbed/split.
+bindsym Mod1+t layout toggle
+bindsym Mod1+v split v
+bindsym Mod1+w kill
+bindsym Mod1+x split h
+
+# Applications.
+bindsym Mod1+Return exec --no-startup-id alacritty
+
+# Pin applications to a workspace.
+assign [class="^Slack$"] $chat
+assign [class="^discord$"] $chat
+assign [class="^Signal$"] $chat
+assign [class="^Steam$"] $games
+assign [class="^Firefox$"] $web
+
+bar {
+  font pango:SauceCodePro Nerd Font Mono 12
+  position top
+  status_command i3status-rs ~/.config/i3status-rust/config.toml
+
+  colors {
+    background #2E3440
+    statusline #D8DEE9
+    separator #3B4252
+    focused_workspace #4C566A #4C566A #EBCB8B
+    active_workspace #4C566A #4C566A #EBCB8B
+    inactive_workspace #4C566A #3B4252 #E5E9F0
+    urgent_workspace #88C0D0 #88C0D0 #2E3440
+    binding_mode #2E3440 #5E81AC #2E3440
+  }
+}
+
+# Theme.
+gaps inner 12
+gaps outer 6
+
+default_border pixel 1
+default_floating_border pixel 1
+
+client.focused #4C566A #EBCB8B #2E3440 #EBCB8B #4C566A
+client.focused_inactive #3B4252 #3B4252 #E5E9F0 #4C566A #3B4252
+client.unfocused #3B4252 #2E3440 #E5E9F0 #3B4252 #3B4252
+client.urgent #88C0D0 #88C0D0 #2E3440 #88C0D0 #88C0D0
+client.placeholder #2E3440 #2E3440 #E5E9F0 #2E3440 #2E3440
+client.background #8FBCBB
+

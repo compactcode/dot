@@ -7,6 +7,7 @@ source /usr/share/zinit/zinit.zsh
 zinit snippet PZTM::completion
 zinit snippet PZTM::directory
 zinit snippet PZTM::history
+zinit snippet PZTM::pacman
 
 zinit snippet OMZP::gpg-agent
 
@@ -36,6 +37,8 @@ alias v='nvim'
 alias ya='yadm add'
 alias yc='yadm commit'
 alias yd='yadm diff'
+alias ydc='yadm diff --cached'
+alias yrh='yadm reset HEAD'
 alias ys='yadm status'
 
 source /usr/share/fzf/key-bindings.zsh

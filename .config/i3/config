@@ -1,5 +1,4 @@
-# Defaults.
-font pango:monospace 8.000000
+# General
 floating_modifier Mod1
 hide_edge_borders none
 force_focus_wrapping no
@@ -86,7 +85,6 @@ assign [class="^Steam$"] $games
 assign [class="^Firefox$"] $web
 
 bar {
-  font pango:SauceCodePro Nerd Font Mono 12
   position top
   status_command i3status-rs ~/.config/i3status-rust/config.toml
 
@@ -103,6 +101,8 @@ bar {
 }
 
 # Theme.
+font pango:monospace 10
+
 gaps inner 12
 gaps outer 6
 
@@ -115,4 +115,3 @@ client.unfocused #3B4252 #2E3440 #E5E9F0 #3B4252 #3B4252
 client.urgent #88C0D0 #88C0D0 #2E3440 #88C0D0 #88C0D0
 client.placeholder #2E3440 #2E3440 #E5E9F0 #2E3440 #2E3440
 client.background #8FBCBB
-

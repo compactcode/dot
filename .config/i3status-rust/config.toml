@@ -52,19 +52,19 @@ interval = 60
 
 [icons]
 [icons.overrides]
-cogs = " "
+cogs = ""
 cpu = ""
 memory_mem = ""
 net_down = ""
 net_up = ""
 net_wired = ""
 net_wireless = ""
-thermometer = " "
+thermometer = ""
 time = " "
-volume_empty = " "
-volume_full = " "
-volume_half = "奔 "
-volume_muted = "ﱝ "
+volume_empty = ""
+volume_full = ""
+volume_half = ""
+volume_muted = "ﱝ"
 
 [theme]
 name = "modern"

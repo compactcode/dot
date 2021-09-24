@@ -17,7 +17,10 @@ scrolling:
   history: 10000
   multiplier: 3
 
-# Colors (Nord)
+font:
+  size: 10
+
+# (Nord)
 colors:
   # Default colors
   primary:

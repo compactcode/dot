@@ -1,15 +1,13 @@
-# Emacs keybindings.
-bindkey -e
-
 # Plugin manager.
 source /usr/share/zinit/zinit.zsh
 
-zinit snippet PZTM::completion
-zinit snippet PZTM::directory
-zinit snippet PZTM::history
-zinit snippet PZTM::pacman
+zinit snippet PZTM::editor # emacs key bindings
+zinit snippet PZTM::completion # auto completion
+zinit snippet PZTM::directory # automatic pushd/popd
+zinit snippet PZTM::history # history setup
+zinit snippet PZTM::pacman # aliases
 
-zinit snippet OMZP::gpg-agent
+zinit snippet OMZP::gpg-agent # ssh agent
 
 export EDITOR=nvim
 export FZF_DEFAULT_OPTS="--reverse --height 40%"

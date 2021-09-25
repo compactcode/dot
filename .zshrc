@@ -46,4 +46,5 @@ alias ys='yadm status'
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

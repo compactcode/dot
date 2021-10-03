@@ -32,3 +32,11 @@ require("which-key").register({
 require("which-key").register({
   ["kj"] = { "<esc><cmd>update<cr>", "Quickly exit insert mode and save"},
 }, { mode = 'i' })
+
+require("which-key").register({
+  ["<leader>"] = {
+    c = { "\"+y", "Copy to clipboard" },
+  },
+}, { mode = 'v' })
+
+vim.api.nvim_set_keymap('t', '<C-n>', '<C-\\><C-n>', {noremap = true})

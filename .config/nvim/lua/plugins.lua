@@ -81,4 +81,14 @@ return require('packer').startup(function(use)
       require('plugins.gitsigns')
     end
   }
+
+  use { "tpope/vim-repeat", }
+  use { "tpope/vim-surround", }
+
+  use {
+    "vim-test/vim-test",
+    config = function()
+      require('plugins.vim-test')
+    end
+  }
 end)

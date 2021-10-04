@@ -8,7 +8,15 @@ zinit snippet PZTM::history # history setup
 zinit snippet PZTM::pacman # aliases
 
 zinit snippet OMZP::gpg-agent # ssh agent
+zinit snippet OMZP::extract # compression utilities
 
+zinit from"gh-r" as"program" mv"direnv* -> direnv" \
+    atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
+    pick"direnv" src="zhook.zsh" for \
+        direnv/direnv
+
+export AWS_VAULT_BACKEND=pass
+export AWS_VAULT_PROMPT=pass
 export EDITOR=nvim
 export FZF_DEFAULT_OPTS='--reverse --height 40%
 --color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C
@@ -16,6 +24,11 @@ export FZF_DEFAULT_OPTS='--reverse --height 40%
 '
 
 alias b='bat'
+alias be='bundle exec';
+alias ber='bundle exec rspec';
+alias berc='bundle exec rails console';
+alias bers='bundle exec rails server';
+alias bi='bundle install';
 alias g='git'
 alias ga='git add'
 alias gars='git add . && git reset --hard'
@@ -31,9 +44,11 @@ alias gp='git push'
 alias grh='git reset HEAD'
 alias grs='git reset --hard'
 alias gs='git status'
+alias j='z'
 alias l='exa -a -l --icons'
 alias lt='exa -a --tree --icons'
 alias md='mkdir -p'
+alias o='xdg-open'
 alias v='nvim'
 alias ya='yadm add'
 alias yc='yadm commit'
@@ -45,6 +60,12 @@ alias ys='yadm status'
 
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+export NVM_DIR=$HOME/.local/share/nvm
+source /usr/share/nvm/nvm.sh
+
+source /usr/share/chruby/chruby.sh
+source /usr/share/chruby/auto.sh
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

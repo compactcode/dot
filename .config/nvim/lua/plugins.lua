@@ -89,6 +89,7 @@ return require('packer').startup(function(use)
     end
   }
 
+  use { "slim-template/vim-slim", }
   use { "tpope/vim-repeat", }
   use { "tpope/vim-surround", }
 

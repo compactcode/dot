@@ -14,6 +14,9 @@ vim.opt.listchars = { space = '_', tab = '>~', trail = '·' }
 -- Disable code folding
 vim.opt.foldenable = false
 
+-- Enable 24bit color
+vim.opt.termguicolors = true
+
 -- ************************************************************
 --  Editing
 -- ************************************************************

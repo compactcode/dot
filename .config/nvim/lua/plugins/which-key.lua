@@ -27,6 +27,12 @@ require("which-key").register({
   ["<C-k>"] = {"<cmd>wincmd k<cr>", "Move window up"},
   ["<C-l>"] = {"<cmd>wincmd l<cr>", "Move window down"},
   Q = {"<cmd>wa<cr>ZZ", "Save all and exit"},
+  ["<leader>"] = {
+    f = {
+      name = "+file",
+      c = { "<cmd>let @+ = expand('%')<cr>", "Copy the current path to clipboard" },
+    },
+  },
 }, { mode = 'n' })
 
 require("which-key").register({

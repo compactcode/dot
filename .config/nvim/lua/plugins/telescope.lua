@@ -39,6 +39,7 @@ require("which-key").register({
       name = "+file",
       f = { "<cmd>Telescope oldfiles<cr>", "Open a recently edited file" },
       s = { "<cmd>Telescope live_grep<cr>", "Search the project" },
+      l = { "<cmd>Telescope resume<cr>", "Show the last search" },
       w = { "<cmd>Telescope grep_string<cr>", "Search the project for the current word" },
     },
     g = {

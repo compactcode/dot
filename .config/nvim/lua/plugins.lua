@@ -53,9 +53,15 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'hrsh7th/nvim-compe', after = { 'nord.nvim' },
+    'hrsh7th/nvim-cmp', after = { 'nord.nvim' },
+    requires = {
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'hrsh7th/cmp-cmdline' },
+    },
     config = function()
-      require('plugins.compe')
+      require('plugins.cmp')
     end
   }
 

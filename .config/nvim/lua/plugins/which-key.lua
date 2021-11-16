@@ -26,6 +26,7 @@ require("which-key").register({
   ["<C-j>"] = {"<cmd>wincmd j<cr>", "Move window right"},
   ["<C-k>"] = {"<cmd>wincmd k<cr>", "Move window up"},
   ["<C-l>"] = {"<cmd>wincmd l<cr>", "Move window down"},
+  Y = {"y$", "Copy to end of line"},
   Q = {"<cmd>wa<cr>ZZ", "Save all and exit"},
   ["<leader>"] = {
     f = {

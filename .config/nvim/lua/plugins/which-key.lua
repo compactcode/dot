@@ -22,6 +22,7 @@ require("which-key").setup {
 }
 
 require("which-key").register({
+  ["<space>"] = {"i<space><esc>l", "Insert a space character"},
   ["<C-h>"] = {"<cmd>wincmd h<cr>", "Move window left"},
   ["<C-j>"] = {"<cmd>wincmd j<cr>", "Move window right"},
   ["<C-k>"] = {"<cmd>wincmd k<cr>", "Move window up"},
@@ -33,6 +34,7 @@ require("which-key").register({
       name = "+file",
       c = { "<cmd>let @+ = expand('%')<cr>", "Copy the current path to clipboard" },
     },
+    [","] = { "<cmd>nohlsearch<cr>", "Clear the current search" },
   },
 }, { mode = 'n' })
 

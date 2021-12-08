@@ -1,8 +1,12 @@
 vim.o.completeopt = "menu,menuone,noselect"
 
 local cmp = require('cmp')
+local lspkind = require('lspkind')
 
 cmp.setup({
+  formatting = {
+    format = lspkind.cmp_format(),
+  },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'buffer' },

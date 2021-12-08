@@ -86,6 +86,16 @@ return require('packer').startup(function(use)
   }
 
   use {
+    'numToStr/Comment.nvim',
+    requires = {
+      { 'folke/which-key.nvim' },
+    },
+    config = function()
+      require('plugins.comment-nvim')
+    end
+  }
+
+  use {
     'lewis6991/gitsigns.nvim',
     requires = {
       { 'nvim-lua/plenary.nvim' },

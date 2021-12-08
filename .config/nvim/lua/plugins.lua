@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'hrsh7th/nvim-cmp', after = { 'nord.nvim' },
+    'hrsh7th/nvim-cmp',
     requires = {
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-buffer' },

@@ -9,7 +9,8 @@ vim.opt.number = true
 vim.opt.wrap = false
 
 -- Show dangling whitespace
-vim.opt.listchars = { space = '_', tab = '>~', trail = '·' }
+vim.opt.list = true
+vim.opt.listchars = { nbsp = '+', tab = '>~', trail = '·' }
 
 -- Disable code folding
 vim.opt.foldenable = false

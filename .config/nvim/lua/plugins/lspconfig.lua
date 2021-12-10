@@ -5,6 +5,7 @@ lsp.solargraph.setup {}
 
 require("which-key").register({
   ["<leader>"] = {
+    h = { "<cmd>lua vim.lsp.buf.hover()<cr>", "+lsp: Show hover" },
     l = {
       name = "+lsp",
       r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
@@ -13,15 +14,3 @@ require("which-key").register({
     },
   },
 })
-
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover, {
-    border = "single"
-  }
-)
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, {
-    border = "single"
-  }
-)

@@ -11,7 +11,7 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'shaunsingh/nord.nvim',
+    "shaunsingh/nord.nvim",
     config = function()
       require('plugins.nord')
     end
@@ -26,90 +26,93 @@ return require('packer').startup(function(use)
   }
 
   use {
-    'nvim-treesitter/nvim-treesitter',
-    requires = { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    config = function()
-      require('plugins.treesitter')
-    end
-  }
-
-  use {
-    'hoob3rt/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-    config = function()
-      require('plugins.lualine')
-    end
-  }
-
-  use {
-    'kyazdani42/nvim-tree.lua',
+    "nvim-treesitter/nvim-treesitter",
     requires = {
-      { 'folke/which-key.nvim' },
-      { 'kyazdani42/nvim-web-devicons', opt = true }
-    },
-    config = function()
-      require('plugins.nvim-tree')
-    end
-  }
-
-  use {
-    'hrsh7th/vim-vsnip',
-    requires = { 'rafamadriz/friendly-snippets' },
-  }
-
-  use {
-    'hrsh7th/nvim-cmp',
-    requires = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-buffer' },
-      { 'hrsh7th/cmp-path' },
-      { 'hrsh7th/cmp-cmdline' },
-      { 'hrsh7th/cmp-vsnip' },
-      { 'hrsh7th/vim-vsnip' },
-      { 'onsails/lspkind-nvim' },
-    },
-    config = function()
-      require('plugins.cmp')
-    end
-  }
-
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'folke/which-key.nvim' },
-      { 'kyazdani42/nvim-web-devicons', opt = true }
-    },
-    config = function()
-      require('plugins.telescope')
-    end
-  }
-
-  use {
-    'numToStr/Comment.nvim',
-    requires = {
+      { 'nvim-treesitter/nvim-treesitter-textobjects' },
       { 'folke/which-key.nvim' },
     },
     config = function()
-      require('plugins.comment-nvim')
+      require("plugins.treesitter")
     end
   }
 
   use {
-    'lewis6991/gitsigns.nvim',
+    "hoob3rt/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    config = function()
+      require("plugins.lualine")
+    end
+  }
+
+  use {
+    "kyazdani42/nvim-tree.lua",
     requires = {
-      { 'nvim-lua/plenary.nvim' },
-      { 'folke/which-key.nvim' },
+      { "folke/which-key.nvim" },
+      { "kyazdani42/nvim-web-devicons", opt = true }
     },
     config = function()
-      require('plugins.gitsigns')
+      require("plugins.nvim-tree")
+    end
+  }
+
+  use {
+    "hrsh7th/vim-vsnip",
+    requires = { "rafamadriz/friendly-snippets" },
+  }
+
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "hrsh7th/cmp-cmdline" },
+      { "hrsh7th/cmp-vsnip" },
+      { "hrsh7th/vim-vsnip" },
+      { "onsails/lspkind-nvim" },
+    },
+    config = function()
+      require("plugins.cmp")
+    end
+  }
+
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+      { "folke/which-key.nvim" },
+      { "kyazdani42/nvim-web-devicons", opt = true }
+    },
+    config = function()
+      require("plugins.telescope")
+    end
+  }
+
+  use {
+    "numToStr/Comment.nvim",
+    requires = {
+      { "folke/which-key.nvim" },
+    },
+    config = function()
+      require("plugins.comment-nvim")
+    end
+  }
+
+  use {
+    "lewis6991/gitsigns.nvim",
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+      { "folke/which-key.nvim" },
+    },
+    config = function()
+      require("plugins.gitsigns")
     end
   }
 
   use {
     "norcalli/nvim-colorizer.lua",
     config = function()
-      require('plugins.nvim-colorizer')
+      require("plugins.nvim-colorizer")
     end
   }
 
@@ -120,7 +123,7 @@ return require('packer').startup(function(use)
   use {
     "vim-test/vim-test",
     config = function()
-      require('plugins.vim-test')
+      require("plugins.vim-test")
     end
   }
 end)

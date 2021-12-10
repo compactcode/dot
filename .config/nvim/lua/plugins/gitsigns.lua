@@ -1,4 +1,6 @@
-require('gitsigns').setup()
+require('gitsigns').setup({
+  keymaps = {},
+})
 
 require("which-key").register({
   ["<leader>"] = {

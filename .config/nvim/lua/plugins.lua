@@ -18,6 +18,13 @@ return require("packer").startup(function(use)
   }
 
   use {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require('plugins.indent-blankline')
+    end
+  }
+
+  use {
     "neovim/nvim-lspconfig",
     requires = { 'folke/which-key.nvim' },
     config = function()

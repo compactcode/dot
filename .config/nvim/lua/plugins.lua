@@ -1,4 +1,4 @@
-return require('packer').startup(function(use)
+return require("packer").startup(function(use)
   use {
     "wbthomason/packer.nvim",
   }
@@ -28,7 +28,8 @@ return require('packer').startup(function(use)
   use {
     "nvim-treesitter/nvim-treesitter",
     requires = {
-      { 'nvim-treesitter/nvim-treesitter-textobjects' },
+      { "nvim-treesitter/nvim-treesitter-textobjects" },
+      { "nvim-treesitter/nvim-treesitter-refactor" },
       { 'folke/which-key.nvim' },
     },
     config = function()

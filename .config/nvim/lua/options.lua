@@ -18,6 +18,8 @@ vim.opt.foldenable = false
 -- Enable 24bit color
 vim.opt.termguicolors = true
 
+-- Reduce delay for background updates.
+vim.opt.updatetime = 750
 -- ************************************************************
 --  Editing
 -- ************************************************************

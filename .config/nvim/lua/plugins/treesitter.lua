@@ -1,4 +1,4 @@
-require('nvim-treesitter.configs').setup {
+require("nvim-treesitter.configs").setup {
   ensure_installed = "maintained",
 
   highlight = {
@@ -8,11 +8,28 @@ require('nvim-treesitter.configs').setup {
     },
   },
 
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      node_incremental = "J",
+      node_decremental = "K",
+    },
+  },
+
   indent = {
     enable = false
   },
 
   textobjects = {
+    lsp_interop = {
+      enable = true,
+      border = "none",
+      peek_definition_code = {
+        ["<leader>p"] = "@function.outer",
+        ["<leader>lp"] = "@function.outer",
+      },
+    },
+
     select = {
       enable = true,
       lookahead = true,
@@ -35,23 +52,10 @@ require('nvim-treesitter.configs').setup {
         ["sk"] = "@parameter.inner",
       },
     },
-
-    lsp_interop = {
-      enable = true,
-      border = 'none',
-      peek_definition_code = {
-        ["<leader>p"] = "@function.outer",
-        ["<leader>lp"] = "@function.outer",
-      },
-    },
   },
 
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      node_incremental = "J",
-      node_decremental = "K",
-    },
+  refactor = {
+    highlight_definitions = { enable = true },
   },
 }
 
@@ -67,9 +71,9 @@ require("which-key").register({
     j = { "Swap parameter -> right" },
     k = { "Swap parameter -> left" },
   },
-}, { mode = 'n' })
+}, { mode = "n" })
 
 require("which-key").register({
   K = { "Expand current selection" },
   J = { "Shrink current selection" },
-}, { mode = 'v' })
+}, { mode = "v" })

@@ -26,7 +26,6 @@ require("nvim-treesitter.configs").setup {
       border = "none",
       peek_definition_code = {
         ["<leader>p"] = "@function.outer",
-        ["<leader>lp"] = "@function.outer",
       },
     },
 
@@ -46,10 +45,10 @@ require("nvim-treesitter.configs").setup {
     swap = {
       enable = true,
       swap_next = {
-        ["sj"] = "@parameter.inner",
+        ["<leader>sj"] = "@parameter.inner",
       },
       swap_previous = {
-        ["sk"] = "@parameter.inner",
+        ["<leader>sk"] = "@parameter.inner",
       },
     },
   },
@@ -62,14 +61,14 @@ require("nvim-treesitter.configs").setup {
 require("which-key").register({
   ["<leader>"] = {
     p = { "+lsp: Peek definition" },
+    s = {
+      j = { "Swap paremeter -> right" },
+      k = { "Swap paremeter -> left" },
+    },
     l = {
       name = "+lsp",
       p = { "Peek definition" },
     },
-  },
-  s = {
-    j = { "Swap parameter -> right" },
-    k = { "Swap parameter -> left" },
   },
 }, { mode = "n" })
 

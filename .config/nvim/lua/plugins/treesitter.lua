@@ -62,6 +62,7 @@ require("which-key").register({
   ["<leader>"] = {
     p = { "+lsp: Peek definition" },
     s = {
+      name = "+treesitter",
       j = { "Swap paremeter -> right" },
       k = { "Swap paremeter -> left" },
     },

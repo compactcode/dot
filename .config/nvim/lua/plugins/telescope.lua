@@ -29,15 +29,21 @@ require('telescope').setup {
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
     grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
     qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
-  }
+  },
+  pickers = {
+    find_files = {
+      find_command = { "fd", "--type", "f", "--strip-cwd-prefix" }
+    },
+  },
 }
 
 require("which-key").register({
   ["<leader>"] = {
-    t = { "<cmd>Telescope find_files<cr>", "Open a file" },
+    t = { "<cmd>Telescope find_files<cr>", "Open a file using fd" },
     f = {
       name = "+file",
       f = { "<cmd>Telescope oldfiles<cr>", "Open a recently edited file" },
+      g = { "<cmd>Telescope git_files<cr>", "Open a file using git ls-files" },
       s = { "<cmd>Telescope live_grep<cr>", "Search the project" },
       l = { "<cmd>Telescope resume<cr>", "Show the last search" },
       w = { "<cmd>Telescope grep_string<cr>", "Search the project for the current word" },

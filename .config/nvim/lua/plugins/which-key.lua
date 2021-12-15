@@ -22,7 +22,6 @@ require("which-key").setup {
 }
 
 require("which-key").register({
-  ["<space>"] = {"i<space><esc>l", "Insert a space character"},
   ["<C-h>"] = {"<cmd>wincmd h<cr>", "Move window left"},
   ["<C-j>"] = {"<cmd>wincmd j<cr>", "Move window right"},
   ["<C-k>"] = {"<cmd>wincmd k<cr>", "Move window up"},

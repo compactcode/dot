@@ -131,6 +131,7 @@ return require("packer").startup(function(use)
     end
   }
 
+  use { "ggandor/lightspeed.nvim", }
   use { "slim-template/vim-slim", }
   use { "tpope/vim-repeat", }
   use { "tpope/vim-surround", }

@@ -40,6 +40,7 @@ require('telescope').setup {
 require("which-key").register({
   ["<leader>"] = {
     t = { "<cmd>Telescope find_files<cr>", "Open a file using fd" },
+    d = { "<cmd>Telescope lsp_definitions<cr>", "lsp: Goto definition" },
     f = {
       name = "+file",
       f = { "<cmd>Telescope oldfiles<cr>", "Open a recently edited file" },

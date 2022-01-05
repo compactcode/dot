@@ -131,6 +131,8 @@ return require("packer").startup(function(use)
     end
   }
 
+  use { "kevinhwang91/nvim-bqf" }
+
   use { "ggandor/lightspeed.nvim", }
   use { "slim-template/vim-slim", }
   use { "tpope/vim-repeat", }

@@ -29,6 +29,7 @@ require("which-key").register({
   Y = {"y$", "Copy to end of line"},
   Q = {"<cmd>wa<cr>ZZ", "Save all and exit"},
   ["<leader>"] = {
+    q = { "<cmd>cnext<cr>", "Go to the next quickfix item" },
     f = {
       name = "+file",
       c = { "<cmd>let @+ = expand('%')<cr>", "Copy the current path to clipboard" },

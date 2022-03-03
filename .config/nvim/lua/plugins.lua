@@ -131,9 +131,17 @@ return require("packer").startup(function(use)
     end
   }
 
-  use { "kevinhwang91/nvim-bqf" }
+  use {
+    "ggandor/lightspeed.nvim",
+    requires = {
+      { "folke/which-key.nvim" },
+    },
+    config = function()
+      require("plugins.lightspeed")
+    end
+  }
 
-  use { "ggandor/lightspeed.nvim", }
+  use { "kevinhwang91/nvim-bqf" }
   use { "slim-template/vim-slim", }
   use { "tpope/vim-repeat", }
   use { "tpope/vim-surround", }

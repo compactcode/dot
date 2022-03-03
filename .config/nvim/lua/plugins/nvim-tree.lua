@@ -9,9 +9,9 @@ require("nvim-tree").setup()
 
 require("which-key").register({
   ["<leader>"] = {
-    b = { "<cmd>NvimTreeToggle<cr>", "Browse files" },
     f = {
       name = "+file",
+      b = { "<cmd>NvimTreeToggle<cr>", "Browse files" },
       o = { "<cmd>NvimTreeFindFile<cr>", "Browse path of the current file" },
     },
   },

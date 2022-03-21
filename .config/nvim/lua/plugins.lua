@@ -6,7 +6,7 @@ return require("packer").startup(function(use)
   use {
     "windwp/nvim-autopairs",
     config = function()
-      require('nvim-autopairs').setup()
+      require("nvim-autopairs").setup()
     end
   }
 
@@ -20,7 +20,7 @@ return require("packer").startup(function(use)
   use {
     "shaunsingh/nord.nvim",
     config = function()
-      require('plugins.nord')
+      require("plugins.nord")
     end
   }
 
@@ -53,7 +53,10 @@ return require("packer").startup(function(use)
 
   use {
     "hoob3rt/lualine.nvim",
-    requires = { "kyazdani42/nvim-web-devicons", opt = true },
+    requires = {
+      "shaunsingh/nord.nvim",
+      "kyazdani42/nvim-web-devicons", opt = true
+    },
     config = function()
       require("plugins.lualine")
     end

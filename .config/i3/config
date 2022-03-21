@@ -73,6 +73,7 @@ bindsym Mod1+x split h
 
 # Services.
 exec --no-startup-id picom -b
+exec --no-startup-id redshift -l -37.814:144.96332
 
 # Applications.
 bindsym Mod1+Return exec --no-startup-id alacritty
@@ -89,6 +90,11 @@ assign [class="^discord$"] $chat
 assign [class="^Signal$"] $chat
 assign [class="^Steam$"] $games
 assign [class="^Firefox$"] $web
+assign [title="^Origin$"] → $games
+
+# Open applications in floating windows.
+for_window [title="^Origin$"] floating enable
+for_window [title="^Origin$"] floating enable
 
 bar {
   font pango:monospace 10

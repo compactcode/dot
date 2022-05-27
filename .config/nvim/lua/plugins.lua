@@ -54,8 +54,8 @@ return require("packer").startup(function(use)
   use {
     "hoob3rt/lualine.nvim",
     requires = {
-      "shaunsingh/nord.nvim",
-      "kyazdani42/nvim-web-devicons", opt = true
+      { "shaunsingh/nord.nvim" },
+      { "kyazdani42/nvim-web-devicons", opt = true }
     },
     config = function()
       require("plugins.lualine")

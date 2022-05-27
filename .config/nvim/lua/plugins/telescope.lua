@@ -52,7 +52,6 @@ require("which-key").register({
     g = {
       name = "+git",
       h = { "<cmd>Telescope git_bcommits<cr>", "Show history for the current file" },
-      s = { "<cmd>Telescope git_status<cr>", "Show changes for the project" },
     },
     l = {
       name = "+lsp",

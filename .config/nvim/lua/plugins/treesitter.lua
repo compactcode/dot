@@ -78,6 +78,12 @@ require("nvim-treesitter.configs").setup {
     highlight_definitions = {
       enable = true
     },
+    smart_rename = {
+      enable = true,
+      keymaps = {
+        smart_rename = "gr",
+      },
+    },
   },
 }
 
@@ -97,6 +103,7 @@ require("which-key").register({
   g = {
     b = { "Goto next block" },
     f = { "Goto next function" },
+    r = { "Rename" },
   },
 }, { mode = "n" })
 

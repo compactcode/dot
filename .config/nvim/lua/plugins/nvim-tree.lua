@@ -1,11 +1,15 @@
-vim.g.nvim_tree_show_icons = {
-   files = 1,
-   folders = 1,
-   folder_arrows = 1,
-   git = 0,
+require("nvim-tree").setup {
+  renderer = {
+    icons = {
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = false,
+      },
+    },
+  }
 }
-
-require("nvim-tree").setup()
 
 require("which-key").register({
   ["<leader>"] = {

@@ -1,5 +1,18 @@
 require("nvim-treesitter.configs").setup {
-  ensure_installed = "maintained",
+  ensure_installed = {
+    "bash",
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "lua",
+    "markdown",
+    "ruby",
+    "rust",
+    "scss",
+    "typescript",
+    "yaml",
+  },
 
   highlight = {
     enable = true,
@@ -29,6 +42,14 @@ require("nvim-treesitter.configs").setup {
       },
     },
 
+    move = {
+      enable = true,
+      goto_next_start = {
+        ["gb"] = "@block.outer",
+        ["gf"] = "@function.outer",
+      },
+    },
+
     select = {
       enable = true,
       lookahead = true,
@@ -54,7 +75,9 @@ require("nvim-treesitter.configs").setup {
   },
 
   refactor = {
-    highlight_definitions = { enable = true },
+    highlight_definitions = {
+      enable = true
+    },
   },
 }
 
@@ -70,6 +93,10 @@ require("which-key").register({
       name = "+lsp",
       p = { "Peek definition" },
     },
+  },
+  g = {
+    b = { "Goto next block" },
+    f = { "Goto next function" },
   },
 }, { mode = "n" })
 

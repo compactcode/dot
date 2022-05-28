@@ -19,7 +19,7 @@ vim.opt.foldenable = false
 vim.opt.termguicolors = true
 
 -- Reduce delay for background updates.
-vim.opt.updatetime = 750
+vim.opt.updatetime = 500
 -- ************************************************************
 --  Editing
 -- ************************************************************

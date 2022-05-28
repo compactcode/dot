@@ -1,9 +1,9 @@
 require('Comment').setup({
-    mappings = {
-        basic = true,
-        extra = false,
-        extended = false,
-    },
+  mappings = {
+    basic = false,
+    extra = false,
+    extended = false,
+  },
 })
 
 require("which-key").register({

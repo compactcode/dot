@@ -12,7 +12,7 @@ require("which-key").setup {
       windows = false, -- default bindings on <c-w>
       nav = false, -- misc bindings to work with windows
       z = false, -- bindings for folds, spelling and others prefixed with z
-      g = true, -- bindings for prefixed with g
+      g = false, -- bindings for prefixed with g
     },
   },
   window = {

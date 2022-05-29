@@ -135,12 +135,12 @@ return require("packer").startup(function(use)
   }
 
   use {
-    "ggandor/lightspeed.nvim",
+    "ggandor/leap.nvim",
     requires = {
       { "folke/which-key.nvim" },
     },
     config = function()
-      require("plugins.lightspeed")
+      require("plugins.leap")
     end
   }
 

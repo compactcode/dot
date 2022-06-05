@@ -44,6 +44,9 @@ require("nvim-treesitter.configs").setup {
 
     move = {
       enable = true,
+      goto_previous_start = {
+        ["gc"] = "@class.outer",
+      },
       goto_next_start = {
         ["gb"] = "@block.outer",
         ["gf"] = "@function.outer",
@@ -102,6 +105,7 @@ require("which-key").register({
   },
   g = {
     b = { "Goto next block" },
+    c = { "Goto class" },
     f = { "Goto next function" },
     r = { "Rename" },
   },

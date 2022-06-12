@@ -1,14 +1,17 @@
 # Plugin manager.
 source /usr/share/zinit/zinit.zsh
 
-zinit snippet PZTM::editor # emacs key bindings
 zinit snippet PZTM::completion # auto completion
 zinit snippet PZTM::directory # automatic pushd/popd
+zinit snippet PZTM::editor # emacs key bindings
 zinit snippet PZTM::history # history setup
 zinit snippet PZTM::pacman # aliases
 
-zinit snippet OMZP::gpg-agent # ssh agent
+zinit snippet OMZP::asdf # version manager
 zinit snippet OMZP::extract # compression utilities
+zinit snippet OMZP::fzf # fuzzy finder
+zinit snippet OMZP::gpg-agent # ssh agent
+zinit snippet OMZP::zoxide # cd replacement
 
 zinit from"gh-r" as"program" mv"direnv* -> direnv" \
     atclone'./direnv hook zsh > zhook.zsh' atpull'%atclone' \
@@ -57,15 +60,6 @@ alias yd='yadm diff'
 alias ydc='yadm diff --cached'
 alias yrh='yadm reset HEAD'
 alias ys='yadm status'
+alias zfp='./bin/zfp'
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-
-export NVM_DIR=$HOME/.local/share/nvm
-source /usr/share/nvm/nvm.sh
-
-source /usr/share/chruby/chruby.sh
-source /usr/share/chruby/auto.sh
-
-eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

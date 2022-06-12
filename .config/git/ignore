@@ -1,3 +1,4 @@
 .direnv
 .envrc
+.projections.json
 target/debug

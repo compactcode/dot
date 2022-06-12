@@ -144,6 +144,13 @@ return require("packer").startup(function(use)
     end
   }
 
+  use {
+    "tpope/vim-projectionist",
+    config = function()
+      require("plugins.projectionist")
+    end
+  }
+
   use { "kevinhwang91/nvim-bqf" }
   use { "slim-template/vim-slim", }
   use { "tpope/vim-repeat", }

@@ -25,15 +25,32 @@ return require("packer").startup(function(use)
   }
 
   use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "~/code/public/neotest-rspec",
+      "nvim-neotest/neotest-plenary",
+    },
+    config = function()
+      require("plugins.neotest")
+    end
+  }
+
+  use {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require('plugins.indent-blankline')
+      require("plugins.indent-blankline")
     end
   }
 
   use {
     "neovim/nvim-lspconfig",
-    requires = { 'folke/which-key.nvim' },
+    requires = {
+      "folke/lua-dev.nvim",
+      "folke/which-key.nvim",
+    },
     config = function()
       require("plugins.lspconfig")
     end

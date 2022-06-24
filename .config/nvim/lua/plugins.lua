@@ -30,7 +30,7 @@ return require("packer").startup(function(use)
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "antoinemadec/FixCursorHold.nvim",
-      "~/code/public/neotest-rspec",
+      "olimorris/neotest-rspec",
       "nvim-neotest/neotest-plenary",
     },
     config = function()
@@ -61,7 +61,7 @@ return require("packer").startup(function(use)
     requires = {
       { "nvim-treesitter/nvim-treesitter-textobjects" },
       { "nvim-treesitter/nvim-treesitter-refactor" },
-      { 'folke/which-key.nvim' },
+      { "folke/which-key.nvim" },
     },
     config = function()
       require("plugins.treesitter")
@@ -172,11 +172,4 @@ return require("packer").startup(function(use)
   use { "slim-template/vim-slim", }
   use { "tpope/vim-repeat", }
   use { "tpope/vim-surround", }
-
-  use {
-    "vim-test/vim-test",
-    config = function()
-      require("plugins.vim-test")
-    end
-  }
 end)

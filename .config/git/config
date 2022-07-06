@@ -1,8 +1,25 @@
-[init]
-  defaultBranch = "main"
-
 [commit]
 	gpgSign = true
+
+[core]
+  pager = delta
+
+[delta]
+  side-by-side = true
+  syntax-theme = "Nord"
+  hyperlinks = true
+
+[diff]
+  colorMoved = default
+
+[merge]
+  conflictstyle = diff3
+
+[interactive]
+  diffFilter = delta --color-only
+
+[init]
+  defaultBranch = "main"
 
 [user]
 	email = "hi@shan.dog"

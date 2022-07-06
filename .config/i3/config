@@ -77,6 +77,7 @@ exec --no-startup-id redshift -l -37.814:144.96332
 
 # Applications.
 bindsym Mod1+Return exec --no-startup-id alacritty
+bindsym Mod1+Shift+Return exec --no-startup-id alacritty --working-directory $(zoxide query)
 bindsym Mod1+b exec --no-startup-id firefox
 bindsym Mod1+Shift+r reload
 bindsym Mod1+space exec --no-startup-id rofi -show drun

@@ -52,7 +52,15 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
     { name = 'vsnip' },
-    { name = 'buffer' },
+    {
+      name = 'buffer',
+      option = {
+        get_bufnrs = function()
+          -- Use all open buffers.
+          return vim.api.nvim_list_bufs()
+        end
+      },
+    },
     { name = 'path' },
   })
 })

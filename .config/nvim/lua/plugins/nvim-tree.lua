@@ -8,7 +8,10 @@ require("nvim-tree").setup {
         git = false,
       },
     },
-  }
+  },
+  view = {
+    adaptive_size = true,
+  },
 }
 
 require("which-key").register({

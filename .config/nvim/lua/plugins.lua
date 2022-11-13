@@ -48,7 +48,7 @@ return require("packer").startup(function(use)
   use {
     "neovim/nvim-lspconfig",
     requires = {
-      "folke/lua-dev.nvim",
+      "folke/neodev.nvim",
       "folke/which-key.nvim",
     },
     config = function()

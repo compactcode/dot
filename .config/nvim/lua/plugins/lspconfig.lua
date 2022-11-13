@@ -1,10 +1,10 @@
+require("neodev").setup {}
+
 local lsp = require('lspconfig')
 
 lsp.rust_analyzer.setup {}
 lsp.solargraph.setup {}
-lsp.sumneko_lua.setup(
-  require("neodev").setup()
-)
+lsp.sumneko_lua.setup {}
 
 require("which-key").register({
   ["<leader>"] = {
